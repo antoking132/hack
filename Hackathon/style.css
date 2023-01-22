@@ -26,13 +26,6 @@
   
 }
 
-body{
-  
-background-color: #ffffff;
-background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, #000000 32px), repeating-linear-gradient(#14052f, #14052f);
-background-color: #000000;
-
-}
 
 #image1{
   width: 150px;
@@ -53,25 +46,136 @@ background-color: #000000;
 
 }
 #lock{
-width: 1200px;
+width: 1210px;
 float: left;
 position: absolute;
 top: 0%;
 left: 15%;
 
+}@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
 }
 
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #ebbf47;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 6s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+  left: 71%;
+  width: 192px;
+  height: 192px;
+  bottom: -192px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 31%;
+  width: 100px;
+  height: 100px;
+  bottom: -100px;
+  animation-delay: 5s;
+}
+.background li:nth-child(2) {
+  left: 79%;
+  width: 171px;
+  height: 171px;
+  bottom: -171px;
+  animation-delay: 4s;
+}
+.background li:nth-child(3) {
+  left: 23%;
+  width: 169px;
+  height: 169px;
+  bottom: -169px;
+  animation-delay: 1s;
+}
+.background li:nth-child(4) {
+  left: 89%;
+  width: 141px;
+  height: 141px;
+  bottom: -141px;
+  animation-delay: 16s;
+}
+.background li:nth-child(5) {
+  left: 70%;
+  width: 112px;
+  height: 112px;
+  bottom: -112px;
+  animation-delay: 2s;
+}
+.background li:nth-child(6) {
+  left: 79%;
+  width: 135px;
+  height: 135px;
+  bottom: -135px;
+  animation-delay: 23s;
+}
+.background li:nth-child(7) {
+  left: 73%;
+  width: 150px;
+  height: 150px;
+  bottom: -150px;
+  animation-delay: 4s;
+}
+.background li:nth-child(8) {
+  left: 31%;
+  width: 169px;
+  height: 169px;
+  bottom: -169px;
+  animation-delay: 24s;
+}
+.background li:nth-child(9) {
+  left: 28%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 12s;
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
 .bn62 {
   color: #1cc49d;
   background-color: #1b2f31;
-  border-radius: 50px;
+  border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 2em;
-  width: 6em;
+  width: 4em;
   font-size: large;
   font-weight: 600;
+  position: fixed;
+  right: 42.5%;
+  top:45%
 }
 
 
