@@ -83,14 +83,13 @@ function passwordStrengthMeter(opts) {
 
 		let score = 0
 
-	  let regexLower = new RegExp('(?=.*[a-z])')
+	  let regexLower = new RegExp('([a-z].*[A-Z])|([A-Z].*[a-z])')
 	  let regexUpper = new RegExp('(?=.*[A-Z])')
 	  let regexDigits = new RegExp('(?=.*[0-9])')
 	  // For length score print user selection or default value
-	  let regexLength = new RegExp('(?=.{' + pswMinLength + ',})')
-
+	  let regexLength = new RegExp('([!,%,&,@,#,$,^,*,?,_,~])')
 	  if (passwordInputValue.match(regexLower)) { ++score }
-	  if (passwordInputValue.match(regexUpper)) { ++score }
+	  if (passwordInputValue.length>10) { ++score }
 	  if (passwordInputValue.match(regexDigits)) { ++score }
 	  if (passwordInputValue.match(regexLength)) { ++score }
 
