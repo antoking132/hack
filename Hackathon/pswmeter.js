@@ -1,24 +1,3 @@
-function passwordCheck() {
-console.log("asdsadasd")
-  const myPassMeter = passwordStrengthMeter({
-    containerElement: '#pswmeter',
-  passwordInput: '#password',
-  showMessage: true, // default: false
-  messageContainer: '#pswmeter-message',
-  messagesList: [
-    'Write your password...',
-    'Easy peasy!',
-    'That is a simple one',
-    'That is better',
-    'Yeah! that password rocks ;)'
-  ],
-  height: 20,
-  borderRadius: 8,
-  pswMinLength: 8,
-  
-});
-}
-
 function passwordStrengthMeter(opts) {
 
 	// Add styles inside body
