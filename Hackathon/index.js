@@ -83,13 +83,13 @@ function passwordStrengthMeter(opts) {
 
 		let score = 0
 
-	  let regexLower = new RegExp('([a-z].*[A-Z])|([A-Z].*[a-z])')
+	  let regexLower = new RegExp('(?=.*[a-z])')
 	  let regexUpper = new RegExp('(?=.*[A-Z])')
 	  let regexDigits = new RegExp('(?=.*[0-9])')
 	  // For length score print user selection or default value
 	  let regexLength = new RegExp('([!,%,&,@,#,$,^,*,?,_,~])')
-	  if (passwordInputValue.match(regexLower)) { ++score }
-	  if (passwordInputValue.length>10) { ++score }
+	  if (passwordInputValue.match(regexLower) ) { ++score }
+	  if (passwordInputValue.match(regexUpper)) { ++score }
 	  if (passwordInputValue.match(regexDigits)) { ++score }
 	  if (passwordInputValue.match(regexLength)) { ++score }
 
@@ -135,4 +135,23 @@ function passwordStrengthMeter(opts) {
   	getScore
   }
 
+}
+var el_down = document.getElementById("geeks");
+ /* Function to generate combination of password */
+ function generateP() {
+	var pass = '';
+	var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 
+			'abcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_-=+';
+	  
+	for (let i = 1; i <= 10; i++) {
+		var char = Math.floor(Math.random()
+					* str.length + 1);
+		  
+		pass += str.charAt(char)
+	}
+	  return pass
+}
+
+function gfg_Run() {
+	el_down.innerHTML = generateP();
 }
